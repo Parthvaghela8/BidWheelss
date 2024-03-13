@@ -37,21 +37,21 @@ public class AddressController {
         Address createdAddress = addressService.createAddress(address);
         return ResponseEntity.ok(createdAddress);
     }
-
-    @PutMapping("/update/{id}")
-    public ResponseEntity<Address> updateAddress(@PathVariable Long id, @RequestBody Address updatedAddress) {
-        Address address = addressService.updateAddress(id, updatedAddress);
-
-        if (address != null) {
-            return ResponseEntity.ok(address);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
-    }
-
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<Object> deleteAddress(@PathVariable Long id) {
-        addressService.deleteAddress(id);
-        return ResponseEntity.ok().build();
-    }
+//
+//    @PutMapping("/update/{id}")
+//    public ResponseEntity<Address> updateAddress(@PathVariable Long id, @RequestBody Address updatedAddress) {
+//        Address address = addressService.updateAddress(id, updatedAddress);
+//
+//        if (address != null) {
+//            return ResponseEntity.ok(address);
+//        } else {
+//            return ResponseEntity.notFound().build();
+//        }
+//    }
+//
+//    @DeleteMapping("/delete/{id}")
+//    public ResponseEntity<Object> deleteAddress(@PathVariable Long id) {
+//        addressService.deleteAddress(id);
+//        return ResponseEntity.ok().build();
+//    }
 }
